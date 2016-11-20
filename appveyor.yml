@@ -1,0 +1,11 @@
+cache:
+  - 'C:\Users\%USERNAME%\.m2\repository'
+
+install:
+  - mvn -q clean install -Pno-network
+  - cd orchid
+  - mvn -q clean package
+  - cd ..\core
+  - mvn -q clean package -Pno-network
+
+build: off
